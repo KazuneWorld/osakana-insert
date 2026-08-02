@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 350px;
+            font-family: sans-serif;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .field {
+            margin-bottom: 8px;
+            padding: 0 8px;
+            box-sizing: border-box;
+        }
+
+        label {
+            text-align: center;
+            display: block;
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 6px;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+        #status {
+            font-size: 11px;
+            color: green;
+            text-align: center;
+            margin-top: 5px;
+            height: 14px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 12px;
+            margin: 10px 0 5px;
+        }
+
+        p.warning-text {
+            color: white;
+            background-color: black;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+        
+        hr {
+            margin: 15px 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        .applicant-form-area {
+            background-color: #bbc8e6;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .companion-form-area {
+            background-color: #e5abbe;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+        button#fill-btn {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button id="fill-btn">⚡フォームに入力する⚡</button>
+    <p class="warning-text">注意：実際のページの入力欄に反映された内容が正しいか、必ず確認してから送信してください。</p>
+
+    <hr>
+
+    <div class="applicant-form-area">
+        <div class="field">
+            <p>■応募者■</p>
+            <label>【SAKANACTION ID(Plus member ID)またはメールアドレス】</label>
+            <input type="text" id="applicant-id" placeholder="SAKANACTION ID(Plus member ID)またはメールアドレス">
+        </div>
+        <div class="field">
+            <label>【パスワード】</label>
+            <input type="password" id="applicant-password" placeholder="パスワード">
+        </div>
+        <div class="field">
+            <label>【チケットを受け取るスマホ電話番号】(半角数字)</label>
+            <input type="tel" id="applicant-phone" placeholder="応募者:チケットを受け取るスマホ電話番号">
+        </div>
+        <div class="field">
+            <label>【チケットを受け取るスマホ電話番号(確認用)】(半角数字)</label>
+            <input type="tel" id="applicant-phone-confirm" placeholder="応募者:チケットを受け取るスマホ電話番号(確認用)">
+        </div>
+    </div>
+    <div class="companion-form-area">
+        <p>■同行者■</p>
+        <div class="field">
+            <label>同行者の【SAKANACTION ID(Plus member ID)】</label>
+            <input type="text" id="companion-id" placeholder="Plus member ID">
+        </div>
+        <div class="field">
+            <label>同行者の【SAKANACTION ID(Plus member ID)に登録している携帯電話番号】</label>
+            <input type="tel" id="companion-id-phone" placeholder="同行者:SAKANACTION ID(Plus member ID)に登録している携帯電話番号">
+        </div>
+        <div class="field">
+            <label>同行者の【チケットを受け取るスマホ電話番号】(半角数字)</label>
+            <input type="tel" id="companion-phone" placeholder="同行者:チケットを受け取るスマホ電話番号">
+        </div>
+        <div class="field">
+            <label>同行者の【チケットを受け取るスマホ電話番号(確認用)】(半角数字)</label>
+            <input type="tel" id="companion-phone-confirm" placeholder="同行者:チケットを受け取るスマホ電話番号(確認用)">
+        </div>
+        <div class="field">
+            <label>同行者の【漢字氏名】</label>
+            <input type="text" id="companion-name" placeholder="同行者:漢字氏名">
+        </div>
+    </div>
+
+    <button id="save">入力内容を保存する</button>
+    <div id="status"></div>
+
+    <hr>
+
+    <button id="fill-btn">⚡フォームに入力する⚡</button>
+    <p class="warning-text">注意：実際のページの入力欄に反映された内容が正しいか、必ず確認してから送信してください。</p>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

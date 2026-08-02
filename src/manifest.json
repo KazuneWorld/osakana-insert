@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "おさかなINSERT",
+  "version": "1.1",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+  {
+    "matches": ["https://eplus.jp/sf/detail/0259760001*"],
+    "js": ["content.js"]
+  },
+  {
+    "matches": ["https://sakanaction.jp/*"],
+    "js": ["content-popup-blocker.js"],
+    "run_at": "document_start"
+  }
+]
+}
