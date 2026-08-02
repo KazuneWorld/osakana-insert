@@ -40,10 +40,12 @@ document.getElementById('save').addEventListener('click', () => {
   });
 });
 
-// 【3】「フォームに入力する」ボタン（id="fill-btn"）の処理
-document.getElementById('fill-btn').addEventListener('click', async () => {
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (tab) {
-    chrome.tabs.sendMessage(tab.id, { action: "DO_AUTOFILL" });
-  }
+// 【3】「フォームに入力する」ボタン（class="fill-btn"）の処理
+document.querySelectorAll('.fill-btn').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (tab) {
+      chrome.tabs.sendMessage(tab.id, { action: "DO_AUTOFILL" });
+    }
+  });
 });
