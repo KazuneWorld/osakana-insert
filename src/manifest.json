@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "おさかなINSERT",
   "version": "1.1",
+  "description": "サカナクションのチケット抽選応募フォームへの入力を補助するChrome拡張機能です。",
   "permissions": [
     "storage"
   ],
